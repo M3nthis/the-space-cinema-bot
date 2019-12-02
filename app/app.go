@@ -33,7 +33,7 @@ func StartApp() {
 	}
 
 	b.Handle("/hello", func(m *tb.Message) {
-		b.Send(m.Chat, "Ciao!")
+		b.Send(m.OriginalChat, "Ciao!")
 	})
 
 	inlineBtn1 := tb.InlineButton{
@@ -56,7 +56,7 @@ func StartApp() {
 
 	b.Handle("/lista_film", func(m *tb.Message) {
 		b.Send(
-			m.Chat,
+			m.Sender,
 			"Scegli l'azione",
 			&tb.ReplyMarkup{InlineKeyboard: inlineKeys},
 		)
