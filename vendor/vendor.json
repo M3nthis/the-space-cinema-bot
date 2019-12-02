@@ -3,6 +3,24 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "geadXU41IUGz3t2YXVxuz/+lviw=",
+			"path": "github.com/M3nthis/the-space-cinema-bot",
+			"revision": "73dce9046058c93dada99e3b0847747cd92dc107",
+			"revisionTime": "2019-11-29T10:12:07Z"
+		},
+		{
+			"checksumSHA1": "pneq8+J6p1gZazc49bB3hEzmBlo=",
+			"path": "github.com/M3nthis/the-space-cinema-bot/app",
+			"revision": "73dce9046058c93dada99e3b0847747cd92dc107",
+			"revisionTime": "2019-11-29T10:12:07Z"
+		},
+		{
+			"checksumSHA1": "HPjJgcSEvp9iP0BJK+g3+0Hr6ME=",
+			"path": "github.com/M3nthis/the-space-cinema-bot/getfilms",
+			"revision": "73dce9046058c93dada99e3b0847747cd92dc107",
+			"revisionTime": "2019-11-29T10:12:07Z"
+		},
+		{
 			"checksumSHA1": "wwEGs3bPrm/zZT0o9gkQ3cJsNu8=",
 			"path": "github.com/joho/godotenv",
 			"revision": "5c0e6c6ab1a0a9ef0a8822cba3a05d62f7dad941",
