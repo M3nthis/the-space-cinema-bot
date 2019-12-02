@@ -46,6 +46,7 @@ func StartApp() {
 		b.Respond(c, &tb.CallbackResponse{
 			ShowAlert: false,
 		})
+		b.Send(c.Sender, "Carico l'elenco dei film...")
 		b.Send(c.Sender, loadFilms(fetchURL))
 	})
 
