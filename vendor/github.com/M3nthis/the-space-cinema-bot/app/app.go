@@ -8,6 +8,7 @@ import (
 	tb "gopkg.in/tucnak/telebot.v2"
 )
 
+//StartApp starts the app
 func StartApp() {
 	var (
 		port      = os.Getenv("PORT")
@@ -45,6 +46,7 @@ func StartApp() {
 		b.Respond(c, &tb.CallbackResponse{
 			ShowAlert: false,
 		})
+		b.Send(c.Sender, "Carico l'elenco dei film...")
 		b.Send(c.Sender, loadFilms(fetchURL))
 	})
 
@@ -67,7 +69,8 @@ func loadFilms(url string) string {
 	films := []getfilms.Film{}
 	err := getfilms.GetList(url, &films)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return "Errore nel caricamento"
 	}
 
 	resp := ""
