@@ -33,7 +33,7 @@ func StartApp() {
 	}
 
 	b.Handle("/hello", func(m *tb.Message) {
-		b.Send(m.OriginalChat, "Ciao!")
+		b.Reply(m.ReplyTo, "Ciao!")
 	})
 
 	inlineBtn1 := tb.InlineButton{
