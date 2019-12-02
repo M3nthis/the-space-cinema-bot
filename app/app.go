@@ -33,33 +33,12 @@ func StartApp() {
 	}
 
 	b.Handle("/hello", func(m *tb.Message) {
-		b.Send(m.OriginalChat, "Ciao!")
+		b.Send(m.Chat, "Ciao!")
 	})
-
-	inlineBtn1 := tb.InlineButton{
-		Unique: "filmList",
-		Text:   "Guarda elenco dei film di oggi",
-	}
-
-	// Button
-	b.Handle(&inlineBtn1, func(c *tb.Callback) {
-		b.Respond(c, &tb.CallbackResponse{
-			ShowAlert: false,
-		})
-		b.Send(c.Sender, "Carico l'elenco dei film...")
-		b.Send(c.Sender, loadFilms(fetchURL))
-	})
-
-	inlineKeys := [][]tb.InlineButton{
-		[]tb.InlineButton{inlineBtn1},
-	}
 
 	b.Handle("/lista_film", func(m *tb.Message) {
-		b.Send(
-			m.Sender,
-			"Scegli l'azione",
-			&tb.ReplyMarkup{InlineKeyboard: inlineKeys},
-		)
+		b.Send(m.Chat, "Carico l'elenco dei film...")
+		b.Send(m.Chat, loadFilms(fetchURL))
 	})
 
 	b.Start()
