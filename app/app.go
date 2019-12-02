@@ -33,7 +33,7 @@ func StartApp() {
 	}
 
 	b.Handle("/hello", func(m *tb.Message) {
-		b.Send(m.Chat, "Ciao!")
+		b.Send(m.OriginalChat, "Ciao!")
 	})
 
 	inlineBtn1 := tb.InlineButton{
@@ -46,8 +46,8 @@ func StartApp() {
 		b.Respond(c, &tb.CallbackResponse{
 			ShowAlert: false,
 		})
-		b.Send(c.Message.Chat, "Carico l'elenco dei film...")
-		b.Send(c.Message.Chat, loadFilms(fetchURL))
+		b.Send(c.Sender, "Carico l'elenco dei film...")
+		b.Send(c.Sender, loadFilms(fetchURL))
 	})
 
 	inlineKeys := [][]tb.InlineButton{
@@ -56,7 +56,7 @@ func StartApp() {
 
 	b.Handle("/lista_film", func(m *tb.Message) {
 		b.Send(
-			m.Chat,
+			m.Sender,
 			"Scegli l'azione",
 			&tb.ReplyMarkup{InlineKeyboard: inlineKeys},
 		)
