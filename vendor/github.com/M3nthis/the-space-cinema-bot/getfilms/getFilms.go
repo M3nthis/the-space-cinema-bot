@@ -10,7 +10,7 @@ type Film struct {
 	Nome string `json:"nome"`
 }
 
-var myClient = &http.Client{Timeout: 10 * time.Second}
+var myClient = &http.Client{Timeout: 120 * time.Second}
 
 func GetList(url string, target *[]Film) error {
 	r, err := myClient.Get(url)
