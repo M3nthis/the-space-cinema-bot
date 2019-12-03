@@ -75,7 +75,8 @@ func loadFilms(url string) string {
 
 	resp := ""
 	for _, film := range films {
-		resp += (film.Nome + "\n\n")
+		resp += (film.Nome + "\n")
+		resp += (film.Orari + "\n\n")
 	}
 	return resp
 }

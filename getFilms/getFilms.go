@@ -6,12 +6,16 @@ import (
 	"time"
 )
 
+// Film represents a film
 type Film struct {
-	Nome string `json:"nome"`
+	Nome  string `json:"nome"`
+	Orari string `json:"orari"`
 }
 
 var myClient = &http.Client{Timeout: 120 * time.Second}
 
+// GetList call the API server and return an Array of
+// Film structs
 func GetList(url string, target *[]Film) error {
 	r, err := myClient.Get(url)
 	if err != nil {

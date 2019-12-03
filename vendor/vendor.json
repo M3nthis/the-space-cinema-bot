@@ -5,14 +5,20 @@
 		{
 			"checksumSHA1": "geadXU41IUGz3t2YXVxuz/+lviw=",
 			"path": "github.com/M3nthis/the-space-cinema-bot",
-			"revision": "2bc50ea2ccd1bdfcb216ccf609e905b3d8fff506",
-			"revisionTime": "2019-12-02T14:18:18Z"
+			"revision": "1cfa7a8718005eb6e5d915cf1ec980f9db9fe583",
+			"revisionTime": "2019-12-02T14:42:11Z"
 		},
 		{
-			"checksumSHA1": "lMbsvvCma4IZFkd/UO1dcYsUtt0=",
+			"checksumSHA1": "4LXE1ozXrf/JmsrXFZw+hKnFAKM=",
 			"path": "github.com/M3nthis/the-space-cinema-bot/app",
-			"revision": "60b2c4416fb0b5ec941974f66ca3ade23389b2c5",
-			"revisionTime": "2019-12-02T14:39:10Z"
+			"revision": "1cfa7a8718005eb6e5d915cf1ec980f9db9fe583",
+			"revisionTime": "2019-12-02T14:42:11Z"
+		},
+		{
+			"checksumSHA1": "NzvY99m8wwLi+vJVWFhIyMPkXXg=",
+			"path": "github.com/M3nthis/the-space-cinema-bot/getFilms",
+			"revision": "1cfa7a8718005eb6e5d915cf1ec980f9db9fe583",
+			"revisionTime": "2019-12-02T14:42:11Z"
 		},
 		{
 			"checksumSHA1": "74HlOyS3RT/t0eWC9lrI8KAIu0Y=",
