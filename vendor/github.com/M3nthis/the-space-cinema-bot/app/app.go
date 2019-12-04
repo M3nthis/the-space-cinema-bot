@@ -1,6 +1,7 @@
 package app
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -47,7 +48,7 @@ func StartApp() {
 			ShowAlert: false,
 		})
 		b.Send(c.Message.Chat, "Carico l'elenco dei film...")
-		b.Send(c.Message.Chat, loadFilms(fetchURL))
+		b.Send(c.Message.Chat, loadFilms(fetchURL), tb.ModeMarkdown)
 	})
 
 	inlineKeys := [][]tb.InlineButton{
@@ -75,8 +76,8 @@ func loadFilms(url string) string {
 
 	resp := ""
 	for _, film := range films {
-		resp += (film.Nome + "\n")
-		resp += (film.Orari + "\n\n")
+		resp += fmt.Sprintf("**%s**\n", film.Nome)
+		resp += fmt.Sprintf("%s\n\n", film.Orari)
 	}
 	return resp
 }
