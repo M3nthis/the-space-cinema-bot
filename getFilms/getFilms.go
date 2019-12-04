@@ -8,8 +8,9 @@ import (
 
 // Film represents a film
 type Film struct {
-	Nome  string `json:"nome"`
-	Orari string `json:"orari"`
+	Nome   string `json:"nome"`
+	Orari  string `json:"orari"`
+	Durata string `json:"durata"`
 }
 
 var myClient = &http.Client{Timeout: 120 * time.Second}

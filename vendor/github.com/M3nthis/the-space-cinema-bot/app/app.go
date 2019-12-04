@@ -77,6 +77,7 @@ func loadFilms(url string) string {
 	resp := ""
 	for _, film := range films {
 		resp += fmt.Sprintf("**%s**\n", film.Nome)
+		resp += fmt.Sprintf("*Durata: %s min.*\n", film.Durata)
 		resp += fmt.Sprintf("%s\n\n", film.Orari)
 	}
 	return resp
